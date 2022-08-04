@@ -1,0 +1,31 @@
+/* Stack Grid Items */
+#showcase .showcase-container,
+#home-articles .articles-container,
+#main-footer .footer-container {
+  grid-template-columns: 1fr;
+}
+
+/* NB: for responsive design, if we have a spaned element inside a grid 
+we have to use grid-column:1 to stack it */
+#main-footer .footer-container > *:last-child {
+  grid-column: 1;
+}
+
+#main-footer .footer-container > *:first-child,
+#main-footer .footer-container > *:nth-child(2) {
+  border-bottom: #444 dotted 1px;
+  padding-bottom: 1rem;
+}
+
+.page-container {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.page-container *:first-child {
+  grid-column: 1;
+}
+
+.l-heading {
+  font-size: 2rem;
+}

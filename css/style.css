@@ -1,0 +1,257 @@
+.category {
+  display: inline-block;
+  color: white;
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+}
+.category-sports {
+  background-color: var(--sports-color);
+}
+.category-ent {
+  background-color: var(--ent-color);
+}
+.category-tech {
+  background-color: var(--tech-color);
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--dark-color);
+  color: white;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-light {
+  background: var(--light-color);
+}
+.btn-primary {
+  background-color: var(--primary-color);
+}
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+}
+
+#main-nav {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+#main-nav .container {
+  display: grid;
+  grid-template-columns: 6fr 3fr 2fr;
+  padding: 1rem;
+  align-items: center;
+}
+
+#main-nav .logo {
+  /* width: 180px; */
+  width: 12rem;
+}
+
+#main-nav ul {
+  justify-self: end;
+  display: flex;
+}
+
+#main-nav ul li a {
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+#main-nav ul li a.current {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#main-nav ul li a:hover {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+#main-nav .social {
+  /* to center it without using his parent element */
+  justify-self: center;
+}
+
+#main-nav .social i {
+  color: hsl(0, 0%, 47%);
+  margin-right: 0.5rem;
+}
+
+/* ShowCase */
+#showcase {
+  color: hsl(0, 0%, 100%);
+  background: var(--dark-color);
+  padding: 2rem;
+  position: relative;
+  /* NB: on veux mettre un fond transparent au ShowCase
+  on va donc utiliser ::before. en positionant ce showcase en relative
+  si on positionne son before en absolute on pourra les superposer et jouer  avec des z-indexet des opacity */
+}
+
+/* Fond Transparent */
+#showcase::before {
+  content: "";
+  position: absolute;
+  background: url(../img/featured.jpg) no-repeat center center/cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+#showcase .showcase-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+#showcase .showcase-content {
+  z-index: 1;
+}
+
+#showcase .showcase-content p {
+  margin-bottom: 1rem;
+}
+
+/* Home articles */
+#home-articles .articles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+#home-articles .articles-container > *:first-child,
+#home-articles .articles-container > *:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  grid-column: 1 / span 2;
+}
+
+#home-articles .articles-container > *:last-child {
+  grid-column: 2 / span 2;
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.bg-dark h1,
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark a,
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary a,
+.bg-secondary h1,
+.bg-secondary h2,
+.bg-secondary h3,
+.bg-secondary a {
+  color: white;
+}
+
+#article .meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(0, 0%, 92%);
+  padding: 0.5rem;
+}
+
+#article .meta .category {
+  margin-top: 0.4rem;
+}
+
+/* Footer */
+#main-footer {
+  background: var(--dark-color);
+  color: white;
+}
+#main-footer img {
+  width: 150px;
+}
+
+#main-footer a {
+  color: white;
+}
+
+#main-footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+}
+
+#main-footer .footer-container > *:last-child {
+  background: #444;
+  grid-column: 1 / span 4;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+#main-footer .footer-container input[type="email"] {
+  width: 90%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type="submit"] {
+  width: 90%;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #555 dotted 1px;
+  width: 90%;
+}
+
+.list li a:hover {
+  color: var(--primary-color) !important;
+}
+/* Inner page grid container for about page */
+.page-container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  grid-gap: 1.5rem;
+}
+
+.page-container > *:first-child {
+  grid-row: 1 / span 3;
+}
