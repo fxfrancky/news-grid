@@ -1,7 +1,7 @@
 :root {
   --primary-color: hsl(0, 67%, 47%);
   --secondary-color: hsl(36, 100%, 49%);
-  --light-color: hsl(0, 0%, 78%);
+  --light-color: hsl(0, 0%, 87%);
   --dark-color: hsl(0, 0%, 20%);
   --max-width: 1100px;
 }
